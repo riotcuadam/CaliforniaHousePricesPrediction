@@ -7,23 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
-df = pd.read_csv("/content/drive/MyDrive/datasets/1553768847-housing.csv")
-
-"""###Cleaning The Data"""
-
-# Check for missing values
-missing_values = df.isnull().sum()
-
-# Check for duplicate rows
-duplicate_rows = df.duplicated().sum()
-
-# Display the findings
-missing_values
-#duplicate_rows
-
-"""###No Missing values"""
-
-df.dtypes
+df = pd.read_csv("1553768847-housing.csv")
 
 """### Some Values Still Empty So Rows Will Be Deleted"""
 
@@ -32,7 +16,7 @@ df.dropna(inplace=True)
 """**DATA IS CLEANED**"""
 
 mean_value = df['median_house_value'].mean()
-mean_value
+print("Mean value is: "mean_value)
 
 X = df[['longitude', 'latitude', 'housing_median_age', 'median_income']]
 y = df['median_house_value']
