@@ -9,8 +9,6 @@ from sklearn.metrics import mean_squared_error
 
 df = pd.read_csv("/content/drive/MyDrive/datasets/1553768847-housing.csv")
 
-df.head()
-
 """###Cleaning The Data"""
 
 # Check for missing values
